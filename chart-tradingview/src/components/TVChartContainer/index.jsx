@@ -56,13 +56,8 @@ export class TVChartContainer extends React.PureComponent {
                 "mainSeriesProperties.candleStyle.wickDownColor": '#7f323f',
             }
         };
-
-        window.TradingView.onready(() => {
-            const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
-
-            widget.onChartReady(() => {
-                console.log('Chart has loaded!')
-            });
+        const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
+        widget.onChartReady(() => {
         });
     }
 
